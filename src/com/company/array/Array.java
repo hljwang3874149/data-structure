@@ -1,4 +1,4 @@
-package com.company;
+package com.company.array;
 
 import java.util.Arrays;
 
@@ -51,12 +51,16 @@ public class Array<T> {
         return size;
     }
 
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
     public int getCapacity() {
         return array.length;
     }
 
     public T find(int index) {
-        if (index < 0 || index > size) throw new IllegalArgumentException("index 小于0 或者大于size");
+        if (index < 0 || index >= size) throw new IllegalArgumentException("index 小于0 或者大于size");
 
         return array[index];
     }
@@ -70,13 +74,13 @@ public class Array<T> {
     }
 
     public T remove(int index) {
-        if (index < 0 || index > size) throw new IllegalArgumentException("index 小于0 或者大于size");
+        if (index < 0 || index >= size) throw new IllegalArgumentException("index 小于0 或者大于size");
         T value = array[index];
         for (int i = index + 1; i < size; i++) {
             array[i - 1] = array[i];
         }
         size--;
-        if (size < getCapacity() / 2) {
+        if (size < getCapacity() / 3) {
             resize(getCapacity() / 2);
         }
 
@@ -84,7 +88,20 @@ public class Array<T> {
 
     }
 
-    public T remove() {
+    public T get(int index) {
+        if (index < 0 || index >= size) throw new IllegalArgumentException("index 小于0 或者大于size");
+        return array[index];
+    }
+
+    public T getLast() {
+        return get(size - 1);
+    }
+
+    public T getFirst() {
+        return get(0);
+    }
+
+    public T removeLast() {
         return remove(size - 1);
     }
 
@@ -98,7 +115,7 @@ public class Array<T> {
     }
 
     public void set(int index, T value) {
-        if (index < 0 || index > size) throw new IllegalArgumentException("index 小于0 或者大于size");
+        if (index < 0 || index >= size) throw new IllegalArgumentException("index 小于0 或者大于size");
         array[index] = value;
     }
 
