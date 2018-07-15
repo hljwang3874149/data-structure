@@ -80,12 +80,15 @@ public class Array<T> {
             array[i - 1] = array[i];
         }
         size--;
-        if (size < getCapacity() / 3) {
+        if (size < getCapacity() / 3 && getCapacity()/3 != 0) {
             resize(getCapacity() / 2);
         }
 
         return value;
 
+    }
+    public T removeFirst(){
+        return  remove(0);
     }
 
     public T get(int index) {

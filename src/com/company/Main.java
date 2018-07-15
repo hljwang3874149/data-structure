@@ -2,13 +2,32 @@ package com.company;
 
 import com.company.array.Array;
 import com.company.array.Student;
+import com.company.queue.ArrayQueue;
 import com.company.stack.ArrayStack;
 
 public class Main {
 
     public static void main(String[] args) {
 //        testArray();
-        testStack();
+//        testStack();
+        testArrayQueue();
+    }
+
+    private static void testArrayQueue() {
+
+        ArrayQueue<Integer> integerArrayQueue = new ArrayQueue<>();
+        for (int i = 0; i < 5 ;i++){
+            integerArrayQueue.enqueue(i);
+            System.out.println(integerArrayQueue.toString());
+
+        }
+        integerArrayQueue.dequeue();
+        System.out.println(integerArrayQueue.toString());
+        integerArrayQueue.enqueue(8);
+        System.out.println(integerArrayQueue.toString());
+
+
+
     }
 
     private static void testStack() {
