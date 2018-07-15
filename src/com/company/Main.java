@@ -4,7 +4,10 @@ import com.company.array.Array;
 import com.company.array.Student;
 import com.company.queue.ArrayQueue;
 import com.company.queue.LoopArrayQueue;
+import com.company.queue.Queue;
 import com.company.stack.ArrayStack;
+
+import java.util.Random;
 
 public class Main {
 
@@ -12,8 +15,25 @@ public class Main {
 //        testArray();
 //        testStack();
 //        testArrayQueue();
-        testLoopQueeu();
+//        testLoopQueeu();
+      System.out.println(testQueueTime(new ArrayQueue<Integer>(),100000));
+      System.out.println(testQueueTime(new LoopArrayQueue<>(),100000));
     }
+
+    private static double testQueueTime(Queue<Integer> queue, int count) {
+        long start = System.nanoTime();
+        Random random = new Random();
+        for (int i = 0; i < count; i++) {
+            queue.enqueue(random.nextInt(Integer.MAX_VALUE));
+        }
+        for (int i = 0; i< count ;i++){
+            queue.dequeue();
+        }
+        long end = System.nanoTime();
+        return (end - start) / 1000000000.0;
+
+    }
+
 
     private static void testLoopQueeu() {
         LoopArrayQueue<Integer> loopQueue = new LoopArrayQueue<>(5);
@@ -25,11 +45,11 @@ public class Main {
                 System.out.println(loopQueue.toString());
             }
         }
-        for(int i =0 ; i < 10;i++){
+        for (int i = 0; i < 10; i++) {
             loopQueue.dequeue();
             System.out.println(loopQueue.toString());
         }
-        for (int i = 0 ; i <10 ;i++){
+        for (int i = 0; i < 10; i++) {
             loopQueue.enqueue(i);
             System.out.println(loopQueue.toString());
         }
