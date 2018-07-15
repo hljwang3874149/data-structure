@@ -29,6 +29,10 @@ public class Main {
             loopQueue.dequeue();
             System.out.println(loopQueue.toString());
         }
+        for (int i = 0 ; i <10 ;i++){
+            loopQueue.enqueue(i);
+            System.out.println(loopQueue.toString());
+        }
     }
 
     private static void testArrayQueue() {

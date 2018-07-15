@@ -69,17 +69,28 @@ public class LoopArrayQueue<E> implements Queue<E> {
         return front == tail;
     }
 
+    private int size() {
+        if (isEmpty()) return 0;
+        if (tail > front) {
+            return tail - front;
+        } else {
+            return array.length - Math.abs(tail - front);
+        }
+
+    }
+
     @Override
     public String toString() {
         StringBuffer buffer = new StringBuffer();
         buffer.append(String.format("LoopArrayQueue { size %d  capacity %d ", size, getCapacity()));
         buffer.append("  front  " + front + " [");
-        for (int i = front; i != tail; i = (i+1)%array.length) {
+        for (int i = front; i != tail; i = (i + 1) % array.length) {
             buffer.append(array[i]);
 
         }
         buffer.append("]  tail = " + tail);
-        buffer.append( " data = " + Arrays.toString(array));
+        buffer.append(" data = " + Arrays.toString(array));
+       buffer.append( " isSame = " +(size == size()));
 
         return buffer.toString();
     }
