@@ -6,6 +6,7 @@ import com.company.queue.ArrayQueue;
 import com.company.queue.LoopArrayQueue;
 import com.company.queue.Queue;
 import com.company.stack.ArrayStack;
+import com.company.tree.bst.BinarySearchTree;
 
 import java.util.Random;
 
@@ -16,8 +17,9 @@ public class Main {
 //        testStack();
 //        testArrayQueue();
 //        testLoopQueeu();
-      System.out.println(testQueueTime(new ArrayQueue<Integer>(),100000));
-      System.out.println(testQueueTime(new LoopArrayQueue<>(),100000));
+//      System.out.println(testQueueTime(new ArrayQueue<Integer>(),100000));
+//      System.out.println(testQueueTime(new LoopArrayQueue<>(),100000));
+        testBSTree();
     }
 
     private static double testQueueTime(Queue<Integer> queue, int count) {
@@ -113,5 +115,22 @@ public class Main {
         System.out.println(array.toString());
         array.removeLast();
         System.out.println(array.toString());
+
+    }
+
+    private  static  void testBSTree(){
+        Integer[] ints = new Integer[]{5,3,4,1,2,6,7};
+        BinarySearchTree<Integer>  binarySearchTree = new BinarySearchTree<>();
+        for (int i = 0; i < ints.length; i++) {
+            binarySearchTree.addNode(ints[i]);
+        }
+        binarySearchTree.preOrder();
+        System.out.println("#########");
+        binarySearchTree.inOrder();
+        System.out.println("#########");
+        binarySearchTree.postOrder();
+        System.out.println("#########");
+        System.out.println(binarySearchTree);
+
     }
 }

@@ -23,6 +23,7 @@ public class LoopArrayQueue<E> implements Queue<E> {
         array[tail] = e;
         tail = (tail + 1) % array.length;
         size++;
+        
 
     }
 
