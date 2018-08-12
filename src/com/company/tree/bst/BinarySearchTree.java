@@ -105,6 +105,138 @@ public class BinarySearchTree<E extends Comparable<E>> {
         }
     }
 
+    public E minNode() {
+        if (size == 0) throw new IllegalArgumentException("BST is null ");
+        return minNode(root).data;
+    }
+
+    private Node minNode(Node node) {
+
+        if (node.left == null) {
+            return node;
+        }
+        return minNode(node.left);
+
+    }
+
+    public E maxNode() {
+        if (size == 0) throw new IllegalArgumentException("BST is null ");
+        return maxNode(root).data;
+    }
+
+    private Node maxNode(Node node) {
+
+        if (node.right == null) {
+            return node;
+        }
+
+        return maxNode(node.right);
+    }
+
+    public E removeMin() {
+        E min = minNode();
+        root = removeMin(root);
+        return min;
+    }
+
+    private Node removeMin(Node node) {
+
+        if (node.left == null) {
+            Node right = node.right;
+            node.right = null;
+            size--;
+            return right;
+        }
+        node.left = removeMin(node.left);
+        return node;
+
+    }
+
+    public E removeMax() {
+        E max = maxNode();
+        root = removeMax(root);
+        return max;
+
+    }
+
+    private Node removeMax(Node node) {
+        if (node.right == null) {
+            Node leftNode = node.left;
+            node.left = null;
+            size--;
+            return leftNode;
+        }
+        node.right = removeMax(node.right);
+        return node;
+
+    }
+
+    public void remove(E e) {
+        remove(root, e);
+
+
+    }
+
+    private Node remove(Node node, E e) {
+        if (node == null) {
+            return null;
+        }
+        if (e.compareTo(node.data) > 0) {
+            node.right = remove(node.right, e);
+            return node;
+        } else if (e.compareTo(node.data) < 0) {
+            node.left = remove(node.left, e);
+            return node;
+        } else {
+            if (node.left == null) {
+                Node right = node.right;
+                node.right = null;
+                size--;
+                return right;
+            }
+            if (node.right == null) {
+                Node left = node.left;
+                node.left = null;
+                size--;
+                return left;
+            }
+
+            return findSuccessorByRightMinNode(node);
+//            return findSuccessorByLeftMaxNode(node); /
+
+        }
+
+    }
+
+    /**
+     * 使用右子树 最小节点
+     *
+     * @param node
+     * @return
+     */
+    private Node findSuccessorByRightMinNode(Node node) {
+        Node successor = minNode(node.right);
+        successor.left = node.left;
+        successor.right = removeMin(node.right);
+        node.left = node.right = null;
+        return successor;
+    }
+
+    /**
+     * 使用 左子树最大值节点
+     *
+     * @param node
+     * @return
+     */
+
+    private Node findSuccessorByLeftMaxNode(Node node) {
+        Node successor = maxNode(node.left);
+        successor.left = removeMax(node.left);
+        successor.right = node.right;
+        node.right = node.left = null;
+        return successor;
+    }
+
     @Override
     public String toString() {
 
@@ -116,13 +248,13 @@ public class BinarySearchTree<E extends Comparable<E>> {
     private void generationBSTString(Node node, int deptch, StringBuilder builder) {
 
         if (node == null) {
-           builder.append( generationString(deptch) +  " null \n");
-            return ;
+            builder.append(generationString(deptch)).append(" null \n");
+            return;
 
         }
-        builder.append(generationString(deptch)+ node.data  + "\n");
-        generationBSTString(node.left,deptch+1,builder);
-        generationBSTString(node.right,deptch+1,builder);
+        builder.append(generationString(deptch)).append(node.data).append("\n");
+        generationBSTString(node.left, deptch + 1, builder);
+        generationBSTString(node.right, deptch + 1, builder);
 
 
     }
@@ -132,7 +264,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
         for (int i = 0; i < deptch; i++) {
             builder.append("--");
         }
-        return  builder.toString();
+        return builder.toString();
 
     }
 }

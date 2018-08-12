@@ -124,13 +124,17 @@ public class Main {
         for (int i = 0; i < ints.length; i++) {
             binarySearchTree.addNode(ints[i]);
         }
-        binarySearchTree.preOrder();
-        System.out.println("#########");
-        binarySearchTree.inOrder();
-        System.out.println("#########");
-        binarySearchTree.postOrder();
-        System.out.println("#########");
-        System.out.println(binarySearchTree);
+        while (!binarySearchTree.isEmpty()){
+
+            System.out.println( binarySearchTree.removeMin());
+        }
+//        binarySearchTree.preOrder();
+//        System.out.println("#########");
+//        binarySearchTree.inOrder();
+//        System.out.println("#########");
+//        binarySearchTree.postOrder();
+//        System.out.println("#########");
+//        System.out.println(binarySearchTree);
 
     }
 }
