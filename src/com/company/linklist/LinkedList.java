@@ -31,7 +31,7 @@ public class LinkedList<E> {
         if (index < 0 || index > size) throw new IllegalArgumentException("  failed  index error");
         Node<E> prev = dummyHead;
         for (int i = 0; i < index; i++) {
-            prev = dummyHead.next;
+            prev = prev.next;
         }
         prev.next = new Node<E>(e, prev.next);
         size++;
@@ -48,6 +48,9 @@ public class LinkedList<E> {
             cur = cur.next;
         }
         return (E) cur.e;
+    }
+    public int getSize(){
+        return  size;
     }
 
     public E getFirst() {
@@ -90,6 +93,9 @@ public class LinkedList<E> {
         e.next = null;
         size--;
         return e.e;
+    }
+    public boolean  isEmpty(){
+        return size == 0;
     }
 
     @Override
