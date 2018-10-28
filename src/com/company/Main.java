@@ -7,6 +7,8 @@ import com.company.queue.LoopArrayQueue;
 import com.company.queue.Queue;
 import com.company.stack.ArrayStack;
 import com.company.tree.bst.BinarySearchTree;
+import com.company.tree.segment.Merger;
+import com.company.tree.segment.SegmentTree;
 
 import java.util.Random;
 
@@ -19,7 +21,8 @@ public class Main {
 //        testLoopQueeu();
 //      System.out.println(testQueueTime(new ArrayQueue<Integer>(),100000));
 //      System.out.println(testQueueTime(new LoopArrayQueue<>(),100000));
-        testBSTree();
+//        testBSTree();
+        testSegmentTree();
     }
 
     private static double testQueueTime(Queue<Integer> queue, int count) {
@@ -28,7 +31,7 @@ public class Main {
         for (int i = 0; i < count; i++) {
             queue.enqueue(random.nextInt(Integer.MAX_VALUE));
         }
-        for (int i = 0; i< count ;i++){
+        for (int i = 0; i < count; i++) {
             queue.dequeue();
         }
         long end = System.nanoTime();
@@ -118,16 +121,18 @@ public class Main {
 
     }
 
-    private  static  void testBSTree(){
-        Integer[] ints = new Integer[]{5,3,4,1,2,6,7};
-        BinarySearchTree<Integer>  binarySearchTree = new BinarySearchTree<>();
+    private static void testBSTree() {
+        Integer[] ints = new Integer[]{5, 3, 4, 1, 2, 6, 7};
+        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
         for (int i = 0; i < ints.length; i++) {
             binarySearchTree.addNode(ints[i]);
         }
-        while (!binarySearchTree.isEmpty()){
+        while (!binarySearchTree.isEmpty()) {
 
-            System.out.println( binarySearchTree.removeMin());
+            System.out.println(binarySearchTree.removeMin());
         }
+
+
 //        binarySearchTree.preOrder();
 //        System.out.println("#########");
 //        binarySearchTree.inOrder();
@@ -136,5 +141,14 @@ public class Main {
 //        System.out.println("#########");
 //        System.out.println(binarySearchTree);
 
+    }
+
+    private static void testSegmentTree() {
+
+        Integer[] integers = new Integer[]{-2, 0, 3, -5, 2, -1};
+        SegmentTree<Integer> segmentTree = new SegmentTree<>(integers, (l, r) -> l + r);
+        System.out.println(segmentTree.toString());
+        System.out.println(segmentTree.query(0,2));
+        System.out.println(segmentTree.query(2,5));
     }
 }

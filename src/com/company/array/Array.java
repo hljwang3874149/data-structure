@@ -19,6 +19,12 @@ public class Array<T> {
 
     }
 
+    public Array(T[] arr) {
+        this.array = (T[]) new Object[arr.length];
+        System.arraycopy(arr, 0, this.array, 0, arr.length);
+        size = arr.length;
+    }
+
     public void add(int index, T i) {
 
         for (int y = size; y > index; y--) {
@@ -40,6 +46,13 @@ public class Array<T> {
         array = newArray;
 
 
+    }
+
+    public void swap(int a, int b) {
+        if (a < 0 || a > size || b < 0 || b > size) throw new IllegalArgumentException("error index ");
+        T t = array[a];
+        array[a] = array[b];
+        array[b] = t;
     }
 
     public void addFirst(T t) {
@@ -80,15 +93,16 @@ public class Array<T> {
             array[i - 1] = array[i];
         }
         size--;
-        if (size < getCapacity() / 3 && getCapacity()/3 != 0) {
+        if (size < getCapacity() / 3 && getCapacity() / 3 != 0) {
             resize(getCapacity() / 2);
         }
 
         return value;
 
     }
-    public T removeFirst(){
-        return  remove(0);
+
+    public T removeFirst() {
+        return remove(0);
     }
 
     public T get(int index) {
