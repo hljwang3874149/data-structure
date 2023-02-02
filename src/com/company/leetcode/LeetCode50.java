@@ -1,5 +1,10 @@
 package com.company.leetcode;
 
+/**
+ * 求pow值
+ * 1.分治
+ * 2.循环
+ */
 public class LeetCode50 {
     public static void main(String[] args) {
         System.out.println(0.00000000D == 0.000f);

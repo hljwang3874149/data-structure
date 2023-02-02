@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="878a43aa-c74b-46e7-9524-f1d324f80d94" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode110.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode122.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode169.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode206.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode50.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/ListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode102.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dataModel/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dataModel/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode122.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode122.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode169.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode169.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode50.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode50.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +219,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;last_opened_file_path&quot;: &quot;/Users/wangxiaolong/Project/data-structure&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -417,6 +412,20 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add leetcode 练习" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

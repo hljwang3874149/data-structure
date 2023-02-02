@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 求众数
+ */
 public class LeetCode169 {
     public static void main(String[] args) {
 

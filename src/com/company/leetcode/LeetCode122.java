@@ -1,5 +1,8 @@
 package com.company.leetcode;
 
+/**
+ * 股票交易 -贪心算法
+ */
 public class LeetCode122 {
     public static void main(String[] args) {
 
