@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="878a43aa-c74b-46e7-9524-f1d324f80d94" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode102.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode104.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode146.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode191.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode208.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode22.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode25_h.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode51.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode69.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode70.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode122.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode122.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode169.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode169.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode50.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/LeetCode50.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dataModel/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dataModel/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/leetcode/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/leetcode/ListNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,8 +225,10 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/wangxiaolong/Project/data-structure&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -228,7 +237,7 @@
       <recent name="com.company.set" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.LeetCode50">
+  <component name="RunManager" selected="应用程序.LeetCode208">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.dynamic_proxy.Client" />
       <module name="dataModel" />
@@ -242,8 +251,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LeetCode20" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.leetcode.LeetCode20" />
+    <configuration name="LeetCode208" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.leetcode.LeetCode208" />
       <module name="dataModel" />
       <extension name="coverage">
         <pattern>
@@ -255,8 +264,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LeetCode206" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.leetcode.LeetCode206" />
+    <configuration name="LeetCode22" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.leetcode.LeetCode22" />
       <module name="dataModel" />
       <extension name="coverage">
         <pattern>
@@ -281,25 +290,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+    <configuration name="LeetCode69" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.leetcode.LeetCode69" />
       <module name="dataModel" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="应用程序.LeetCode208" />
+      <item itemvalue="应用程序.LeetCode69" />
+      <item itemvalue="应用程序.LeetCode22" />
       <item itemvalue="应用程序.LeetCode50" />
       <item itemvalue="应用程序.Client" />
-      <item itemvalue="应用程序.LeetCode20" />
-      <item itemvalue="应用程序.LeetCode206" />
-      <item itemvalue="应用程序.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.LeetCode208" />
+        <item itemvalue="应用程序.LeetCode69" />
+        <item itemvalue="应用程序.LeetCode22" />
         <item itemvalue="应用程序.LeetCode50" />
         <item itemvalue="应用程序.Client" />
       </list>
@@ -459,6 +474,11 @@
           <url>file://$PROJECT_DIR$/src/com/company/leetcode/LeetCode206.java</url>
           <line>347</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/leetcode/LeetCode69.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
